@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Contact</title>
+      <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Style/Contact.css" />
+  </head>
+  <body>
+    <header class="header-section">
+      <h1>Pravin kumar J</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Project.html" >Project</a></li>
+          <li><a href="Contact.html" id="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <img src="../Assets/image/menu.png" alt="" class="menu">
+      
+    </header>
+    <main class="main-section">
+      <h2>To Contact</h2>
+      <section class="form-container">
+        <form action="" class="form">
+          <label for="name ">Name</label>
+          <input
+            type="text"
+            placeholder="Enter your Name"
+            title="Enter your name"
+            required
+          />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter your Email" required title="Enter the Valid Email"/>
+          <label for="subject">Subject</label>
+          <input type="text" required placeholder="Enter the Subject" title="Suject" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="10" cols="50"></textarea>
+          <button>Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Pravin kumar J</p>
+      <p>91+ 906454687789</p>
+      <a href="mailto:pravinr2631@gmail.com">pravinr2631@gmail.com</a>
+      <a href="">LinkedIn Profile</a>
+      <!--Need to add the linkedIn profile link -->
+    </footer>
+        <script>
+        let menu = document.querySelector('.menu')
+        let navbar = document.querySelector('.navbar')
+        menu.addEventListener('click',()=>{
+            navbar.classList.toggle('display-navbar')
+        })
+
+    </script>
+  </body>
+</html>

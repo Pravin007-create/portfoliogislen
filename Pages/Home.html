@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Style/Home.css" />
+  </head>
+  <body>
+    <!--Header for Heading and navbar-->
+    <header class="header-section">
+      <h1>Pravin kumar J</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="Home.html" id="home">Home</a></li>
+          <li><a href="Project.html">Project</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <img src="../Assets/image/menu.png" alt="" class="menu" />
+    </header>
+
+    <main class="main-section">
+      <section class="intro-section">
+        <figure class="image">
+          <img
+            src="../assets/image/img2.webp"
+            alt="profile-image"
+            title="Profile Picture"
+          />
+        </figure>
+
+        <article class="introduction">
+          <h2>Introduction</h2>
+          <p>
+            Hi, Iam Pravin kumar J ,
+            <abbr title="Master Of computer Application">MCA</abbr> Graduated ,
+            Currently Iam Working in Gislen Software as a Software Engineer
+            Trainee. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Rem, doloribus.
+          </p>
+        </article>
+        <article class="Skills">
+          <h2>Technical Skills</h2>
+          <ul class="skill-list">
+            <li>C#</li>
+            <li>SQL Server</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </article>
+        <blockquote
+          cite="https://www.brainyquote.com/authors/barack-obama-quotes"
+        >
+          <p>
+            <i
+              ><q
+                >Change will not come if we wait for some other person or some
+                other time. We are the ones we've been waiting for. We are the
+                change that we see</q
+              ></i
+            >
+          </p>
+        </blockquote>
+      </section>
+    </main>
+    <footer>
+      <p>Pravin kumar J</p>
+      <p>91+ 906454687789</p>
+      <a href="mailto:pravinr2631@gmail.com">pravinr2631@gmail.com</a>
+      <a href="">LinkedIn Profile</a>
+      <!--Need to add the linkedIn profile link -->
+    </footer>
+    <script>
+      let menu = document.querySelector(".menu");
+      let navbar = document.querySelector(".navbar");
+      menu.addEventListener("click", () => {
+        navbar.classList.toggle("display-navbar");
+      });
+    </script>
+  </body>
+</html>

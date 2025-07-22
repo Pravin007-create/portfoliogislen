@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: rgb(13, 185, 238);
+  --text-color: rgb(0, 0, 0);
+}
+#home{
+    background-color: rgb(234, 233, 233);
+}
+.header-section {
+  width: 100%;
+  display: flex;
+  background-color: var(--bg-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.header-section h1 {
+  color: var(--text-color);
+  font-size: 2vw;
+  margin-left: 20vw;
+  letter-spacing: 2px;
+
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+
+  width: 30vw;
+  justify-content: space-between;
+  padding-right: 10vw;
+}
+.navbar ul a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: max(1vw, 15px);
+}
+.navbar ul a:hover {
+  background-color: rgb(255, 255, 255, 0.6);
+  color: black;
+}
+
+.intro-section {
+  width: 100%;
+}
+
+.intro-section img {
+  max-width: 200px;
+  height: auto;
+}
+.menu {
+  width: 32px;
+  height: 35px;
+  display: none;
+}
+
+.intro-section {
+  box-shadow: 2px 2px 10px black;
+  background-color: white;
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 5vw auto;
+  padding: 2rem;
+  position: relative;
+}
+@property --bgrotate{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.intro-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: conic-gradient(from var(--bgrotate), red, green, blue, yellow, red);
+  z-index: -1;
+  padding: 10px;
+  top: -10px;
+  animation-name: bgrotate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes bgrotate {
+    0%{
+        --bgrotate:0deg;
+    }
+    100%{
+        --bgrotate:360deg;
+    }
+    
+}
+.main-section {
+  margin-top: max(23vh,100px);
+}
+.image {
+  border-radius: 10px;
+  background: linear-gradient(to right, rgb(134, 87, 6), rgb(155, 155, 155));
+}
+
+.introduction p {
+  text-align: justify;
+  text-indent: 2vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-list li {
+  margin: 1rem 0;
+
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 2px 2px 5px var(--bg-color);
+}
+/* Hover the Skills box to Translate*/
+.skill-list li:hover {
+  transform: translate(3px, -5px);
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+footer {
+  width: 100%;
+  background-color:rgb(22, 22, 22); 
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 3rem;
+  align-items: center;
+}
+footer p {
+  margin-top: 1rem;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  margin-top: 1rem;
+}
+footer a:hover {
+  color: blue;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+  }
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-section h1 {
+    margin-left: 0;
+    font-size: 1.4rem;
+  }
+ 
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    justify-content: space-around;
+    margin-left:60px;
+  }
+  .display-navbar {
+    display: flex;
+  }
+}
+@media(max-width:426px){
+    .header-section h1 {
+        
+        font-size: 1.4rem;
+       
+       
+    }
+    .menu{
+        width: 20px;
+        height: 20px;
+        right: 10%;
+    }
+}
